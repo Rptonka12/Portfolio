@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\rachel\source\repos\homework2_pierstorff\homework2_pierstorff\main.cpp(33): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
+  Homework2_Pierstorff.vcxproj -> C:\Users\Rachel\source\repos\Homework2_Pierstorff\x64\Debug\Homework2_Pierstorff.exe

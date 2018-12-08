@@ -1,0 +1,274 @@
+@charset "UTF-8"
+/* colors: blue=#4d6376, light tan=#dbae8b, tan=#bc8153, maroon=#6b2f23, black=#2a201e */
+
+/* GENERAL STYLES AND HEADER */
+body { font-family: "Palatino Linotype", Georgia, serif; }
+
+header { background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1)), url(wallpaper.jpg); }
+
+header h1 { 
+	font-family: "Century Gothic", sans-serif; 
+	color: #6b2f23; 
+	font-weight: bold;
+	font-size: xx-large;
+}
+
+/* MENU BAR */
+.menubar ul {
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	list-style: none;
+	background-color: #4d6376;
+}
+
+.menubar li { margin: 10px; }
+
+.menubar ul li a {
+	margin: 3px;
+	padding: 3px 7px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold; 
+	color: #2a201e;
+	background-color: #bc8153;
+	border-radius: 0.5em;
+	transition-property: background-color, color;
+	transition-duration: 0.6s;
+	transition-timing-function: ease;
+}
+
+.menubar ul li a:hover {
+	background-color: #6b2f23;
+	color: white;
+}
+
+.menubar ul li a.active {
+	background-color: #6b2f23;
+	color: white;
+}
+
+@media screen and (min-width: 35em) {
+	.menubar ul { 
+		display: flex;
+		justify-content: center;
+		padding: 0;
+	}
+}
+
+/* CALENDAR PAGE */
+.travelcalendar {
+	color: #2a201e;
+	width: 100%;
+}
+
+.travelcalendar td {
+	width: 14%;
+	text-align: center;
+	height: 40px;
+	margin-bottom: 5px;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.month th { 
+	padding: 15px; 
+	background: #4d6376;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+}
+
+.weekdays { 
+	background-color: #dbae8b; 
+	font-size: 14px;
+}
+.week { 
+	background: #eee;
+	font-size: 10px; 
+}
+
+.week td:hover {
+	background: lightgray;
+}
+
+@media screen and (min-width: 35em) {
+	.month th { font-size: 26px; }
+	.weekdays { font-size: 20px; }
+	.week {  font-size: 14px;  }
+}
+
+/* LIST PAGE */
+#gridcontainer {
+	display: grid;
+	grid-template-rows: [content-start] 20px 100px 0.5fr;
+	grid-template-columns: 1fr 3fr 3fr 3fr;
+	grid-row-gap: 5px;
+	grid-column-gap: 5px;
+	grid: 
+		"placesbeenhead list1 list2 list3" 
+		"placesbeen1 sec1 sec2 sec3" 
+		"placesbeen2 div1 div2 div3" 
+}
+
+.placesbeen.table {
+	grid-row: placesbeen1/placesbeen2;
+	overflow: scroll;
+}
+
+.pb_places td {
+	padding: 10px;
+	background-color: #eee;
+}
+
+.pb_places.date {
+	width: 20%;
+}
+
+.placesvisit {
+	grid-row: sec1 / div1;
+	grid-column: sec1;
+	background-color: lightgray;
+}
+
+.placesbeen.heading {
+	grid-area: placesbeenhead;
+}
+.placesvisit.heading {
+	grid-area: list1;
+}
+
+.placetypes.heading {
+	grid-row: list2;
+	grid-column: list2 / list3;
+}
+
+.heading {
+	text-align: center;
+	background-color: #2a201e;
+	color: white;
+}
+
+.outdoor {
+	grid-area: sec2;
+	background-color: #dbae8b;
+}
+
+.buildings{
+	grid-area: sec3;
+	background-color: #6b2f23;
+	color: white;
+}
+
+.routes {
+	grid-area: div2;
+	color: white;
+	background-color: #4d6376;
+}
+
+/* GALLERY */
+#container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.pic { 
+	margin: 5px;
+	max-width: 24%;
+	filter: grayscale(100%);
+	transition-property: filter, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+}
+
+.pic:hover {
+	transform: scale(1.5);
+	filter: none;
+	z-index: 1;
+}
+
+.pic3 {
+	transform: rotate(180deg);
+}
+
+.pic3:hover {
+	transform: scale(1.5) rotate(180deg);
+}
+
+/* ADDRESS BOOK PAGE */
+#addresses{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#addresses td, #addresses th{
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+#addresses tr:nth-child(even) {
+	background-color: #dbae8b;
+}
+
+#addresses th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6b2f23;
+    color: white;
+}
+
+#addresses tr:hover {
+	background-color: lightgray;
+}
+
+.letter {
+	text-align: center;
+	font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+	color: #2a201e;
+	font-size: 12px;
+	background-color: lightgray;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer .box2 input, footer .box2 textarea, footer .box2 button {
+	width: 300px;
+	margin: 5px;
+}
+
+::placeholder {
+	font-family: "Palatino Linotype", Georgia, serif;
+}
+
+@media screen and (min-width: 35em) {
+	footer { 
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;		
+		padding: 10px;
+		max-height: 150px;
+	}
+
+	footer .box1{
+		width: 400px;
+	}
+
+	footer .box2{
+		width: 700px;
+	}
+
+	footer .box2 input, footer .box2 textarea {
+		width: 300px;
+		padding: 3px;
+		margin: 5px;
+	}
+}

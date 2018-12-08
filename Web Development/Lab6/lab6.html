@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lecture 06</title>
+	</head>
+	<body>
+		<h1> Form Test </h1>
+		<form action="formresults.php" method="POST">
+			<h2> Start of the Form </h2>
+			<!--Name boxes-->
+			<label for="firstname">First Name:</label>
+			<input type="text" id="firstname" name="firstname">
+			<br>
+			<label for="lastname">Last Name:</label>
+			<input type="text" id="lastname" name="lastname">
+			<br> <br>
+
+			<!--Email-->
+			<label for="emailaddr">Email:</label>
+			<input type="email" id="emailaddr" name="emailaddr" placeholder="email address">
+			<br>
+
+			<!--Grade (radio buttons)-->
+			<p> What year in school are you? </p>
+			<ol>
+				<li><input type="radio" name="year">Freshman</li>
+				<li><input type="radio" name="year">Sophomore</li>
+				<li><input type="radio" name="year">Junior</li>
+				<li><input type="radio" name="year">Senior</li>
+			</ol>
+
+			<!--Communication types (check boxes)-->
+			<p> What forms of communication to you check? </p>
+			<ul>
+				<li><input type="checkbox" name="comm">Email</li>
+				<li><input type="checkbox" name="comm">Phone</li>
+				<li><input type="checkbox" name="comm">Mail</li>
+			</ul>
+
+			<br> <h3> Scheduling </h3> <br>
+			<!--Picking meeting times (drop down list) -->
+			<p> Which day works best for you for meetings? 
+				<select name="Day of the Week">
+					<option>Sunday</option>
+					<option>Mondady</option>
+					<option>Tuesday</option>
+					<option>Wednesday</option>
+					<option>Thursday</option>
+					<option>Friday</option>
+					<option>Saturday</option>
+				</select>
+			</p>
+
+			<!--extra credit scrolling group list-->
+			<p> What time of day are you available? 
+				<select name="Times of Day" size="6" multiple>
+					<optgroup label="Morning">
+						<option>9am</option>
+						<option>10am</option>
+						<option>11am</option>
+						<option>12pm</option>
+					</optgroup>
+					<optgroup label="Afternoon">
+						<option>1pm</option>
+						<option>2pm</option>
+						<option>3pm</option>
+						<option>4pm</option>
+					</optgroup>
+					<optgroup label="Evening">
+						<option>5pm</option>
+						<option>6pm</option>
+						<option>7pm</option>
+					</optgroup>
+				</select>
+			</p>
+
+			<p> 
+				<label>Comments: any additional info about availability? <br> 
+				<textarea name="availabilitycomments" rows="5" cols="50"> 200 words or less!
+				</textarea> </label> 
+			</p>
+
+			<button type="reset">Reset Form</reset>
+			<button type="submit">Submit</submit>
+		</form>
+	</body>
+</html>

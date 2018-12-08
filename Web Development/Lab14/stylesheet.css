@@ -1,0 +1,65 @@
+@charset "UTF-8"
+
+/* 2. Use one of the link pseudo-classes (:link or :visited) to style an anchor */
+a:visited { color: green; }
+
+/* 3. Use one of the action pseudo-classes (:focus, :hover, :active) to style an anchor */
+a:hover { background-color: yellow; }
+
+/* 4. Use 2 of the pseudo-classes (4 for graduate students) listed on slide 7 to style HTML elements */
+p.firstp a:only-of-type { text-decoration: overline; }
+div p:last-of-type { color: white; }
+
+/* 5. Use one of the :first-line or :first-letter pseudo-element selectors to style a paragraph */
+p::first-line { letter-spacing: 8px; }
+
+/* 6. Use one of :before or :after pseudo-element selectors to add content to a paragraph */
+p.firstp:before { content: "Once upon a time: "; }
+
+/* 7. Use 2 of the attribute selectors (4 for graduate students) on slide 11 to style HTML elements */
+img[src$=".jpg"] { border: 8px solid; }
+img[title="smiley"] { align-content: center; }
+
+/* 8. Use the background-image property to add a background to an HTML element */
+h1 { background-image: url(geo.jpg); }
+
+/* 9. Use the background-repeat property to change the repeat value of a background image on an HTML element*/ 
+div { background-image: url(geo.jpg); background-repeat: repeat; }
+
+/* 10. Use the background-position property to change the origin location of a background image on an HTML element */
+h2 { background-image: url(color2.jpg); background-origin: bottom; }
+
+/* 11. Use the background-attachment property to change the scroll behavior of the background image of an HTML element with sufficient content that it is scrollable */
+article { 
+	background-image: url(gray.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/* 12. Use the background shorthand property to add a background image to an HTML element (all optional properties must be specified)*/
+body { background: white url(circles.jpg) no-repeat right top fixed }
+
+/* 14. Create one of linear-gradient() or radial-gradient() gradients within an HTML element */
+section { background-image: linear-gradient(90deg, yellow, orange 25%, magenta); }
+
+/* 15. Set the width and height of an HTML element using a box-sizing of content-box*/
+p.firstp { width: 750px; height: 200px; }
+
+/* 16. Set the width and height of an HTML element using a box-sizing of border-box */
+article { box-sizing: border-box; width: 750px; height: 500px; align-content: center; }
+
+/* 17. Change the overflow property of an HTML element with content sufficient to be scrollable to something other than the default value */
+article { overflow: scroll; }
+
+/* 18. Set the padding of an HTML element */
+article { padding: 2px 2px 2px 125px; }
+
+/* 19. Change the border style, width, and color of an HTML element */
+h2 { border-style: double; border-color: white; border-width: 10px; }
+
+/* 20. Create a border on an HTML element that is either rounded or elliptical */
+h1 { border-radius: 1em; }
+
+/* 21. Extra Credit: Create a border-image for an HTML element that correctly uses the background image and get 2 bonus points! */
+img[title="smiley"] { border-image: url(frame.png) 100 fill / 100px 75px stretch; }

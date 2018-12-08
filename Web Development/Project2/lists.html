@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bucket Map</title>
+		<style> @import url(stylesheet.css); </style>
+		<script>
+			let addPlace = function() {
+				let placesList = document.getElementById("placeslist");
+				let newPlaceInput = document.getElementById("newPlaceInput");
+				var newListElement = document.createElement("li");
+  				newListElement.appendChild(document.createTextNode(newPlaceInput.value));
+  				placesList.appendChild(newListElement);
+  				newPlaceInput.value = "";
+			}
+
+			let addOutdoorPlace = function() {
+				let outdoorPlaces = document.getElementById("outdoorplaces");
+				let newOutdoorInput = document.getElementById("newOutdoorInput");
+				var newListElement = document.createElement("li");
+  				newListElement.appendChild(document.createTextNode(newOutdoorInput.value));
+  				outdoorPlaces.appendChild(newListElement);
+  				newOutdoorInput.value = "";
+			}
+
+			let addBuildingPlace = function() {
+				let buildingPlaces = document.getElementById("buildingplaces");
+				let newBuildingInput = document.getElementById("newBuildingInput");
+				var newListElement = document.createElement("li");
+  				newListElement.appendChild(document.createTextNode(newBuildingInput.value));
+  				buildingPlaces.appendChild(newListElement);
+  				newBuildingInput.value = "";
+			}
+
+			let addRoutePlace = function() {
+				let routePlaces = document.getElementById("routeplaces");
+				let newRouteInput = document.getElementById("newRouteInput");
+				var newListElement = document.createElement("li");
+  				newListElement.appendChild(document.createTextNode(newRouteInput.value));
+  				routePlaces.appendChild(newListElement);
+  				newRouteInput.value = "";
+			}
+ 
+			var form1 = function() {
+				alert("This form is not currently connected to anything.");
+			}
+		</script>
+	</head>  
+	<body>    
+		<header>
+			<h1> List View </h1>
+			<nav class="menubar">
+				<ul>
+					<li> <a href="mapmain.html"> MAP </a> </li>
+					<li> <a href="calendar.html">CALENDAR </a> </li>
+					<li> <a href="lists.html" class="active"> LISTS </a></li>
+					<li> <a href="addresses.html"> ADDRESS BOOK </a></li>
+					<li> <a href="gallery.html"> GALLERY </a> </li>
+				</ul>
+			</nav>
+		</header>
+		<hr>
+		<div id="gridcontainer">
+			<div class="placesbeen heading">
+				<h4> Places I've Been </h4>
+			</div>
+			<table class="placesbeen table">
+				<tr class="pb_places places1">
+					<td class="pb_places date"> 1995 </td>
+					<td class="pb_places location"> Hawaii </td>
+				</tr>
+				<tr class="pb_places places2">
+					<td> 1995 </td>
+					<td> Hawaii </td>
+				</tr>
+				<tr class="pb_places places3">
+					<td> 1997 </td>
+					<td> Alaska </td>
+				</tr>
+				<tr class="pb_places places4">
+					<td> 2000 </td>
+					<td> Wisconsin </td>
+				</tr>
+				<tr class="pb_places places5">
+					<td rowspan="2"> 2001 </td>
+					<td> Minnesota </td>
+				</tr>
+				<tr class="pb_places places6">
+					<td> Spain, France </td>
+				</tr>
+				<tr class="pb_places places7">
+					<td> 2002 </td>
+					<td> Mexico </td>
+				</tr>
+				<tr class="pb_places places8">
+					<td> 2004 </td>
+					<td> New York </td>
+				</tr>
+				<tr class="pb_places places9">
+					<td> 2005 </td>
+					<td> California </td>
+				</tr>
+				<tr class="pb_places places10">
+					<td> 2006 </td>
+					<td> Canada </td>
+				</tr>
+			</table>
+			<div class="placesvisit heading">
+				<h4> Countries I Want To Visit </h4>
+			</div>
+			<div class="placesvisit">
+				<ul id="placeslist"> 
+					<li> England </li>
+					<li> South Africa </li>
+					<li> Brazil </li>
+					<li> New York </li>
+					<li> Morocco </li>
+					<li> New Zealand </li>
+					<li> Mongolia </li>
+					<li> Ghana </li>
+					<li> Argentina </li>
+					<li> Guatemala </li>
+					<li> Denmark </li>
+					<li> Italy </li>
+				</ul>
+				<input type="text" id="newPlaceInput"/> <button onclick="addPlace()">Add New Place</button>
+			</div>
+			<div class="placetypes heading">
+				<h4> Lists To Keep Track Of </h4>
+			</div>
+			<div class="placetypes outdoor">
+				<ul id="outdoorplaces"> <h4> Outdoor Places </h4>
+					<li> National Parks </li>
+					<li> Peak Bagging </li>
+					<li> Ski Resorts </li>
+					<li> Skydiving Drop Zones </li>
+					<li> State High Points </li>
+				</ul>
+				<input type="text" id="newOutdoorInput"/> <button onclick="addOutdoorPlace()">Add New Outdoor Category</button>
+			</div>
+			<div class="placetypes buildings">
+				<ul id="buildingplaces"> <h4> Buildings </h4>
+					<li> Capital Buildings </li>
+					<li> Sports Arenas </li>
+					<li> Airports </li>
+					<li> Museums </li>
+				</ul>
+				<input type="text" id="newBuildingInput"/> <button onclick="addBuildingPlace()">Add New Building Category</button>
+			</div>
+			<div class="placetypes routes">
+				<ul id="routeplaces"> <h4> Routes </h4>
+					<li> Roadtrips </li>
+					<li> Hikes/Trails </li>
+					<li> Bike Trails </li>
+					<li> Rail Trips </li>
+				</ul>
+				<input type="text" id="newRouteInput"/> <button onclick="addRoutePlace()">Add New Route Category</button>
+			</div>
+		</div>
+		<hr>
+		<footer class="questions">
+			<div class="box box1">
+				<h3> Have questions? </h3>
+				<p> If you have any questions or comments about the content of this website, fill out the form to the right and we'll get back to you soon. </p>
+				<small> Copyright &copy; 2018 Rachel Pierstorff. </small>
+			</div>
+			<div class="box box2">
+				<form action="" method="POST" id="usrform">
+					<input type="text" name="user_name" placeholder="Name"> <br>
+					<input type="text" placeholder="Phone number (5551112222)" name="phone" pattern="[\d][\d][\d][\d][\d][\d][\d][\d][\d][\d]"> <br>
+					<textarea placeholder="Your question or comment" name="question" form="usrform" rows="2" ></textarea> <br>
+					<button onclick="form1()">Submit</button>
+				</form>
+			 </div>
+		</footer>
+	</body>  
+</html>

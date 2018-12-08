@@ -1,0 +1,70 @@
+@charset "UTF-8"
+
+/* 2. Adjust the margin of at least two HTML elements */
+em#italics { margin: 2em; }
+
+/* 2.a. One element must be an image with margins on all sides inside a paragraph, to show how margins work on inline elements */
+img#orangeflower { margin: 2em; }
+
+/* 3. Adjust the display role of at least two HTML elements */
+p#p1 { display: inline; }
+p#p2 { display: block; }
+
+/* 4. Add a box-shadow to an HTML element */
+p#p2 { box-shadow: 6px 6px 5px #666; }
+
+/* 5. Float an inline element inside a paragraph using relative positioning */
+img#orangeflower { float: left; }
+
+/* 6. Float a block element using absolute positioning */
+img#geo { 
+	display: block; 
+	float: right; 
+	margin: 10px; 
+}
+
+/* 7. Clear an element after a floated element so that it appears on a new line */
+h3 { clear: left; }
+
+/* 8. Create a navigation menu containing at least 3 elements using multiple CSS floats of list elements */
+/* 8.a. The menu must have rounded edges for each list element */
+/* 8.b. The menu must use fixed positioning to always be visible on the page (make the page have sufficient content to be scrollable) */
+ul { 
+	list-style-type: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+	background-color: gray;
+	position: fixed;
+}
+
+ul li { float: left; }
+
+header nav ul li a {
+	display: block;
+	width: 75px;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 10px;
+	color: white;
+	background-color: navy;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+h1 { clear: left; }
+
+/* 10. Position at least two elements so that they overlap, and then change the order in which they are stacked using the z-index property */
+#one {
+	z-index: 2;
+	position: relative;
+	top: 2em;
+	left: 15px;
+}
+
+#two {
+	z-index: 100;
+	position: relative;
+	bottom: 35em;
+	left: 20em;
+}

@@ -1,0 +1,4 @@
+Widget: w1 gadget: 0 0.0 gadget: 0 gadget: 1 1.0 gadget: 1 gadget: 2 2.0 gadget: 2
+Widget: w1 gadget: 0 0.0 gadget: 0 gadget: 1 1.0 gadget: 1 gadget: 2 2.0 gadget: 2
+Widget: w1 gadget: 0 0.0 gadget: 0 gadget: 1 1.0 gadget: 1 gadget: 2 2.0 gadget: 2
+Widget: w1 gadget: 0 0.0 gadget: 0 gadget: 1 1.0 gadget: 1 gadget: 2 2.0 gadget: 2

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ready Player 1</title>
+		<link rel="stylesheet" href="first-js.css">
+		<script type ="text/javascript">
+			var x;
+			console.log(x);
+
+			var z;
+			if(z === undefined){
+				console.log("is undefined");
+			} else {
+				console.log("is not undefined");
+			}
+
+			if(!z){
+				console.log("is undefined");
+			} else {
+				console.log("is not undefined");
+			}
+
+			var nan;
+			z = 2;
+			console.log(z + nan);
+
+			var gx = 5;
+			function foo() {
+				var x1 = 7;
+				console.log(gx);
+				console.log(x);
+			}
+			foo();
+			console.log(gx);
+
+			//use of var and let in a function
+			function bar(){
+				var x2 = 8;
+				{
+					console.log(x2);
+					let x2 = 6;
+					console.log(x2);
+				}
+				console.log(x2);
+			}
+			bar();
+
+			var z1 = parseFloat("-42.42") + 1;
+			console.log(z1);
+			var z1 = "-42.42" + 1; //prints as a string
+			console.log(z1);
+
+			//string literal
+			console.log("\\");
+
+			//array literal, for loop, for of loop
+			var fav_pets = ["cat", "dog", "fish"];
+			for (var i = fav_pets.length - 1; i >= 0; i--) {
+				console.log(fav_pets[i]);
+			}
+			for (var i of fav_pets) {
+				console.log(i);
+			}
+
+			//object literal
+			var obj = {
+				a:"value"
+			}
+			console.log(obj)
+
+			//while loop
+			var x = 0
+			while (x < 5){
+				console.log(x);
+				x = x+1;
+			}
+
+			//function
+			var z3 = 10;
+			console.log(obj.a);
+			console.log(z3);
+			function foo1(objToModify, primitiveValue){
+				objToModify.a = "New Value";
+				primitiveValue = 20;
+			}
+			foo1(obj, z3);
+			console.log(obj.a);
+			console.log(z3);
+
+		</script>
+	</head>  
+	<body>    
+		<p>Player 1: Chris</p>
+		<form action="/form-handler" method="POST">
+			<label for="firstname"> First Name: </label>
+			<input placeholder="First Name" autocomplete="given-name" type="text" id="firstname" name="user_name"> 
+		</form>
+	</body>  
+	<script>  
+		var para = document.querySelector('p');
+		para.addEventListener('click', updateName);
+		function updateName() {    
+			var name = prompt('Enter a new name');
+			para.textContent = 'Player 1: ' + name;  
+		}  
+	</script>
+</html>

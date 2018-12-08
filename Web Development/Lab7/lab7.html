@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lecture 07</title>
+		
+		<script type="text/javascript"> 
+			window.addEventListener('load', eventWindowLoaded, false);
+			function eventWindowLoaded() { canvasApp(); } 
+			function canvasApp() { 
+				var theCanvas = document.getElementById('my_first_canvas'); 
+				var my_canvas = theCanvas.getContext('2d'); 
+				my_canvas.strokeRect(0,0,200,225);
+				my_canvas.beginPath();
+				my_canvas.arc(100, 100, 75, (Math.PI/180)*0, (Math.PI/180)*360, false);
+				my_canvas.strokeStyle = "black"; // circle outline is black
+				my_canvas.lineWidth = 3; // outline is three pixels wide
+				my_canvas.fillStyle = "yellow"; // fill circle with yellow
+				my_canvas.stroke(); // draw circle
+				my_canvas.fill(); // fill in circle
+				my_canvas.closePath();
+				my_canvas.fillStyle = "black"; // switch to black for the fill
+				my_canvas.beginPath();
+				my_canvas.arc(65, 70, 10, (Math.PI/180)*0, (Math.PI/180)*360, false); // circle dimensions
+				my_canvas.stroke(); // draw circle
+				my_canvas.fill(); // fill in circle
+				my_canvas.closePath();
+				my_canvas.beginPath();
+				my_canvas.arc(135, 70, 10, (Math.PI/180)*0, (Math.PI/180)*360, false); // circle dimensions
+				my_canvas.stroke(); // draw circle
+				my_canvas.fill(); // fill in circle
+				my_canvas.closePath();
+				my_canvas.lineWidth = 6; // switch to six pixels wide for outline
+				my_canvas.beginPath();
+				my_canvas.arc(99, 120, 35, (Math.PI/180)*0, (Math.PI/180)*-180, false);// semicircle dimensions
+				my_canvas.stroke();
+				my_canvas.closePath();
+				my_canvas.fillStyle = "black"; // switch to black for text fill
+				my_canvas.font = '20px _sans'; // use 20 pixel sans serif font
+				my_canvas.fillText ("Hello Canvas!", 45, 200); // write text
+			}
+		</script> 
+	</head>
+	<body>
+		<h1> Lecture 07 </h1>
+		<iframe src="../lab6/lab6.html" height="300" width="800"> lecture 6 </iframe>
+		<br>
+		<video src="mountains.mov" width="400" height="400" controls> A random video from nature </video>
+		<br>
+
+		<audio controls preload="auto" > <source src="letitbe.mp3"> Let It Be - Beatles </audio>
+		<br>
+		<canvas id="my_first_canvas" width="600" height="400"></canvas>
+
+		<!--Quantifier and boundary -->
+		<form action="formresults.php" method="POST">
+		<label for="Hello">Type "Hello":</label>
+		<input type="text" id="Hello" name="Hello" pattern="\bHello?">
+		<br>
+
+		<!--Alternation -->
+		<label for="yesorno">Type Yes or No:</label>
+		<input type="text" id="yesorno" name="yesorno" pattern="Yes|No">
+		<br>
+
+		<!--Character case 1 -->
+		<label for="state">Type your 2 letter state code:</label>
+		<input type="text" id="state" name="state" pattern="[A-Z][A-Z]"> 
+		<br>
+
+		<!--Character case 2 -->
+		<label for="state">Type your 5 digit zip code:</label>
+		<input type="text" id="zip" name="zip" pattern="[\d][\d][\d][\d][\d]"> 
+		<br>
+		<button type="reset">Reset Form</reset>
+		<button type="submit">Submit</submit>
+		</form>
+	</body>
+</html>

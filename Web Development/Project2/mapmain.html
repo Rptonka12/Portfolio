@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bucket Map</title>
+		<link rel="stylesheet" href="stylesheet.css">
+		<script> 
+			var form1 = function() {
+				alert("This form is not currently connected to anything.");
+			}
+		</script>
+	</head>  
+	<body>    
+		<header>
+			<h1> Map View </h1>
+			<nav class="menubar">
+				<ul>
+					<li> <a href="mapmain.html" class="active"> MAP </a> </li>
+					<li> <a href="calendar.html">CALENDAR </a> </li>
+					<li> <a href="lists.html"> LISTS </a></li>
+					<li> <a href="addresses.html"> ADDRESS BOOK </a></li>
+					<li> <a href="gallery.html"> GALLERY </a> </li>
+				</ul>
+			</nav>
+		</header>
+		<hr>
+		<p>
+			See where you've been and where you'll go on the world map!
+			<img src="map.jpg" width=100% >
+		</p>
+		<hr>
+		<footer class="questions">
+			<div class="box box1">
+				<h3> Have questions? </h3>
+				<p> If you have any questions or comments about the content of this website, fill out the form to the right and we'll get back to you soon. </p>
+				<small> Copyright &copy; 2018 Rachel Pierstorff. </small>
+			</div>
+			<div class="box box2">
+				<form action="" method="POST" id="usrform">
+					<input type="text" name="user_name" placeholder="Name"> <br>
+					<input type="text" placeholder="Phone number (5551112222)" name="phone" pattern="[\d][\d][\d][\d][\d][\d][\d][\d][\d][\d]"> <br>
+					<textarea placeholder="Your question or comment" name="question" form="usrform" rows="2" ></textarea> <br>
+					<button onclick="form1()">Submit</button>
+				</form>
+			 </div>
+		</footer>
+	</body>  
+</html>

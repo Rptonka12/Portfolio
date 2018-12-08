@@ -1,0 +1,8 @@
+Rachel Pierstorff
+Project 1
+
+My Project 1 begins the implementation of a "bucket map" website. Much like the concept of a bucket list, where people list activities they want to do in life, this geography-based website keeps track of people's bucket lists in map form. This is inspired by the printable maps available for purchase online--but this project is intended to be the digital version. For instance, you can buy scratch-off maps of the world or United States and scratch away the surface of each place you've been to, to reveal a different color ink underneath. My overall goal is to create an interactive site map, like Google Maps, where users can scroll around, in and out on a map of where they've been and would like to go.
+
+In terms of website design, for this first project, I've implemented four static pages to serve as the base structure of the website. The primary, "Map View" page, will ideally hold an interactive map after a more dyanmic version is created. For now, it holds an image of the country. The calendar view is intended to look similar to Google Calendar, but focus on keeping track time-wise of where and when users have traveled. The list view will categorize places users have visited, and the address book view will maintain a list of the user's contacts so they can see their network geographically. 
+
+Each page has a matching header, eventually intended to function like "tabs" of one cohesive site. The form at the bottom of each page makes it easy for users to ask questions about the website.

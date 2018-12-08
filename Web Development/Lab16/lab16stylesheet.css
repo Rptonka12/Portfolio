@@ -1,0 +1,106 @@
+@charset "UTF-8"
+
+/* 2. Create a Flexbox layout that contains at least five flex items in the container */
+.box { 
+	width: 25%;
+	height: 25px;
+	flex: 1 0 0%;
+}
+
+#container{
+	width: 1000px;
+	height: 500px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	/* Change the alignment of the Flexbox container using the align-content property */
+	align-content: center; 
+}
+
+div, .menubar, #menu {
+	border-width = 2px; 
+	border-color: black; 
+	border-style: solid; 
+}
+
+/* Set an absolute flex property on one of the flex items */
+.box4 {
+	align-self: flex-end;
+	flex: 3 1 auto;
+	order: -1;
+}
+
+.box1 {
+	flex: 2;
+}
+
+#menubar {
+	display: flex;
+	background-color: #00af8f;
+	list-style: none;
+	padding: 0.5em;
+	margin: 0;
+	align-items: center; 
+}
+
+.menu {
+	margin: 0 1em;
+}
+
+.map {
+	margin-right: auto;
+}
+
+
+/* 3. Create a CSS Grid layout that contains at least seven grid items in the grid container */
+#gridcontainer {
+	display: grid;
+	grid-template-rows: [header-start] 100px [content-start] 100px 0.5fr 0.5fr [footer-start] 1fr;
+	grid-template-columns: 1fr 3fr 3fr 3fr;
+	/* Change either the spacing or alignment of your grid from its default value */
+	grid-row-gap: 20px;
+	grid-column-gap: 20px;
+	grid-template-areas: 
+		"header header header header"
+		"placesbeen list1 list2 list3"
+		"placesbeen list1 sec2 sec3"
+		"placesbeen list1 div2 div3"
+		"footer footer footer footer"
+}
+
+/* Define at least three named grid areas, and place grid items in each named area using the grid-area property */
+.placeslist{
+	grid-area: header;
+	text-align: center;
+}
+
+.questions {
+	grid-area: footer;
+}
+
+.placesbeen {
+	grid-area: placesbeen;
+}
+
+.placesvisit {
+	grid-area: list1;
+}
+
+.heading{
+	grid-row:2/3;
+	grid-column: 3/5;
+	text-align: center;
+}
+
+.outdoor {
+	grid-area: sec2;
+}
+
+.buildings{
+	grid-area: sec3;
+}
+
+.routes {
+	grid-area: div2;
+}

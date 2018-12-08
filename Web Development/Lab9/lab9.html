@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ready Player 1</title>
+		<link rel="stylesheet" href="first-js.css">
+		<script type ="text/javascript">
+			//JavaScript Object using prototype with at least 2 properties, including nested objects, primitives, functions, and arrays
+			var user_info = {
+				name: {
+					first:'Bob',
+					last: 'Smith'
+				},
+				age: 19,
+				interests: ['javascript', 'video games'],
+				bio: function(name) {
+					let alertString = this.name.first + ' ' + this.name['last'] + ' is ' + this.age + ' years old';
+					alert(alertString);
+					alert(name);
+					return alertString;
+				}
+			};
+
+			var user1 = Object.create(user_info);
+
+			//dynamically adding a field after object is created
+			user_info['home'] = 'Colorado';
+
+			//JavaScript Object using constructor function and primitives
+			function Car(make, model, year) {
+				this.make = make;
+				this.model = model;
+				this.year = year;
+			};
+
+			var mycar = new Car('Eagle', 'Talon TSi', 1993);
+			console.log(mycar);
+			
+			//Window method 1 
+			console.log(window.location.href);
+
+			//event type as HTML attribute and window method 2
+			var myFunction = function() {
+				window.alert('clicked');
+			}
+
+			//event type as method
+			var keypress = function(){
+				window.alert('key pressed');
+			}
+			window.onkeypress = keypress();
+
+			//event type as addEventListener
+			var loading = function() {
+				window.alert("page loaded");
+			}
+			window.addEventListener("load", loading());
+
+
+			//code from class
+			var Animal = {
+				type: 'Invertebrates',
+				displayType: function(){
+					console.log(this.type);
+				}
+			}
+			var animal1 = Object.create(Animal);
+			console.log(animal1);
+			console.log(animal1.type);
+
+			var fish = Object.create(Animal);
+			fish.type = "Fishes";
+			fish.displayType;
+			console.log(fish);
+			
+			// Object.defineProperties method
+			var o = { 
+				a: 0 };
+			Object.defineProperties(o, { 
+				'b': { get: function() { return this.a + 1; } },
+				'c': { set: function(x) { this.a = x / 2; } }});
+
+			// Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+			o.c = 10; 
+			// Runs the getter, which yields a + 1 or 6
+			console.log(o.b);
+			o.b = 20;
+			console.log(o.b);
+		</script>
+	</head>
+	<!--event listener as an HTML attribute -->
+	<body onclick="myFunction();">
+		<p> 
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+		</p>
+	</body>
+</html>

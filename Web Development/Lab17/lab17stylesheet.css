@@ -1,0 +1,51 @@
+/* Create at least one @media query that changes your styles for the page depending on viewport size */
+@media screen and (min-width: 40em){
+	p {
+		font-family: 'Lobster', cursive;
+	}
+}
+
+/* Add a transition to an HTML element */
+	/* You must use at a minimum the transition-property and transition-duration properties, plus one of: transition-timing-function, transition-delay */
+h1 {
+	font-family: fantasy;
+	color: white;
+	font-stretch: extra-expanded;
+	background-color: blue;
+	transition-property: background-color;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	transition-delay: 0.2s;
+}
+
+h1:hover, h1:focus {
+	background-color: red;
+}
+
+/* Apply a transitioning transformation to an HTML element */
+	/* You must use at least two of the transformations listed on slide 43 */
+img#orangeflower {
+	transform: rotate(10deg) skewX(-12deg);
+}
+
+/* Apply a 3D transformation to an HTML element, applying a perspective and using at least one transformation function */
+img#smiley {
+	perspective: 600;
+	transform: rotateX(45deg);
+}
+
+/* Create a keyframe animation for an HTML element using at least 3 unique frames */
+@keyframes colors {
+	0% { background-color: red; }
+	20% { background-color: orange; }
+	40% { background-color: yellow; }
+	60% { background-color: green; }
+	80% { background-color: blue; }
+	100% { background-color: purple; }
+
+}
+
+.keyframe {
+	animation: colors 10s linear infinite alternate;
+	font-size: xx-large;
+}

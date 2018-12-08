@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<htmL>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 10</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type ="text/javascript">
+			//1. Wrap DOM script in a jQuery ready function
+			$(document).ready(function() { 
+				//2. Get element using ID and update its displayed value
+				var section1 = document.getElementById("section1");
+				section1.innerHTML = '<strong> Section 1 </strong>';
+				section1.style.color = "#abc";
+
+				//3. Retrieve at least 4 input elements and change their title attributes
+				var forms = document.getElementsByTagName('input');
+				for (var i = 0; i < forms.length; i++) {
+					console.log(forms[i].innerHTML);
+
+					forms[i].setAttribute('title', 'newTitle');
+				}
+
+				//5. extra credit: use query selector all 
+				var textInput = document.querySelectorAll("input[type='text'");
+				for (var i = 0; i < textInput.length; i++) {
+					console.log(textInput[i].innerHTML);
+				}
+
+				//7. 2 different jQuery selectors and change class names
+				$("#firstlastname").addClass("nameheading");
+				$(".anotherheading").addClass("contactheading");
+			}); 
+
+			//6. Create 3 new elements using at least two of the append/insert/replace/remove functions
+			var counter = 0;
+
+			function appendText() {
+				var div = document.getElementById('textParent');
+				var newParagraph = document.createElement('p');
+				var paraText = document.createTextNode("Paragraph Text " + counter);
+				counter++;
+				newParagraph.appendChild(paraText);
+
+				if(counter===0){
+					div.appendChild(newParagraph);
+				} else {
+					div.insertBefore(newParagraph, div.children[0]);
+				}
+			}
+
+			function createParagraph() {
+				var div1 = document.getElementById('paraParent');
+				var newParagraph1 = document.createElement('p');
+				var paraText1 = document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+				newParagraph1.appendChild(paraText1);
+				div1.appendChild(newParagraph1);
+			}
+
+			var counter1 = 1;
+			function insertHeading() {
+				var div2 = document.getElementById('headingNeeded');
+				var newHeading = document.createElement('h1');
+				var headingText = document.createTextNode("Heading " + counter1);
+				counter1++;
+				newHeading.appendChild(headingText);
+				div2.appendChild(newHeading);
+			}
+
+		</script>
+	</head>
+	<body>
+		<p id="section1">
+			<div id="headingNeeded"></div> 
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>
+			<button type = "button" onclick="insertHeading();"> Click to add heading </button>
+		</p>
+		<p id="section2"> 
+			Section 2 <br>
+			<button type = "button" onclick="appendText();"> Click To Append Text </button>
+			<div id="textParent"> </div>
+		</p>
+		<p id="section3">
+			<h1 id="firstlastname" class="aheading"> Name </h1>
+			Section 3 <br>
+			<input type = "text" id="firstname" name = "first name" placeholder="First Name" title="firstname"> <br>
+			<input type = "text" id="lastname" name = "last name" placeholder="Last Name" title="lastname">
+		</p>
+		<p id="section4">
+			<h1 id="contact" class="anotherheading"> Contact Info </h1>
+			Section 4 <br>
+			<input type = "text" id="phone" name="phone" placeholder="phone number" title="phone">
+		</p>
+		<p id="section5">
+			Section 5 <br>
+			<input type = "text" id="email" name="email" placeholder="email" title="email"> <br>
+			<button type = "button" onclick="createParagraph();"> Click To Add a Paragraph Text </button>
+			<div id="paraParent"> </div>
+		</p>
+	</body>
+</html>

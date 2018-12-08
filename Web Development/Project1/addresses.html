@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bucket Map</title>
+	</head>  
+	<body> 
+		<header>   
+			<h1> Address Book View </h1>
+			<p>
+				<a href="mapmain.html"> MAP |  </a>
+				<a href="calendar.html">CALENDAR | </a>
+				<a href="lists.html"> LISTS  | </a>
+				<a href="addresses.html"> ADDRESS BOOK </a>
+		</header>
+		<p>
+			Keep track of your contacts, so you can stay with friends when you travel!
+			<table <table border="1">
+				<tr> 
+					<th> Letter </th>
+					<th> Name </th>
+					<th> Address </th>
+				</tr>
+				<tr>
+					<th rowspan="3">A </th>
+					<td> Adams </td>
+					<td> 123 Cherry Way, Seattle </td>
+				</tr>
+				<tr>
+					<td> Andersons </td>
+					<td> 444 4th St, Denver </td>
+				</tr>
+				<tr>
+					<td> <em> name </em> </td>
+					<td> <em> address </em> </td>
+				</tr>
+				<tr>
+					<th rowspan="3">B </th>
+					<td> Barrys </td>
+					<td> 987 South Drive, Los Angeles </td>
+				</tr>
+				<tr>
+					<td> <em> name </em> </td>
+					<td> <em> address </em> </td>
+				</tr>
+				<tr>
+					<td> <em> name </em> </td>
+					<td> <em> address </em> </td>
+				</tr>
+				<tr>
+					<th rowspan="3"> .... </th>
+					<td> ... </td>
+					<td> ... </td>
+				</tr>
+			</table>
+		</p>
+		<footer>
+			<p> Have questions? Submit your question and we'll get back to you soon!
+				<form action="/form-handler" method="POST">
+					<fieldset>
+						<legend> Customer Information </legend>
+						<label for="name"> Name: </label>
+						<input placeholder="Name" autocomplete="given-name" type="text" id="name" name="user_name">
+						<label for="phone">Phone:</label>
+						<input type="text" placeholder="(5551112222)"id="phone" name="phone" pattern="[\d][\d][\d][\d][\d][\d][\d][\d][\d][\d]"> 
+					</fieldset>
+					<fieldset>
+						<label>Your question or comment: <br> <textarea name="question" rows="4" cols="50"> </textarea> </label>  
+						<br>
+						<button type="submit">Submit</submit> </button>
+					</fieldset>
+				</form>
+				<br>
+				<small> Copyright &copy; 2018 Rachel Pierstorff. </small> 
+			</p>
+		</footer>
+	</body>  
+</html>

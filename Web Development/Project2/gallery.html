@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bucket Map</title>
+		<style> @import url(stylesheet.css); </style>
+		<script> 
+			var form1 = function() {
+				alert("This form is not currently connected to anything.");
+			}
+		</script>
+	</head>  
+	<body>    
+		<header>
+			<h1> Gallery View </h1>
+			<nav class="menubar">
+				<ul>
+					<li> <a href="mapmain.html"> MAP </a> </li>
+					<li> <a href="calendar.html"> CALENDAR </a> </li>
+					<li> <a href="lists.html"> LISTS </a></li>
+					<li> <a href="addresses.html"> ADDRESS BOOK </a></li>
+					<li> <a href="gallery.html" class="active"> GALLERY </a> </li>
+				</ul>
+			</nav>
+			<hr>
+		</header>
+		<div id="container">
+			<img src="images/1.jpg" class="pic pic1"> 
+			<img src="images/2.jpg" class="pic pic2"> 
+			<img src="images/IMG_2625.jpg" class="pic pic3"> 
+			<img src="images/4.jpg" class="pic pic4"> 
+			<img src="images/5.jpg" class="pic pic5"> 
+			<img src="images/6.jpg" class="pic pic6"> 
+			<img src="images/7.jpg" class="pic pic7"> 
+			<img src="images/8.jpg" class="pic pic8"> 
+			<img src="images/cope.jpeg" class="pic pic9"> 
+			<video src="images/TXVideo.mp4" class="pic pic10" controls> MP4 video </video>
+			<img src="images/IMG_0237.jpg" class="pic pic11"> 
+			<img src="images/IMG_0402.jpg" class="pic pic12"> 
+			<img src="images/IMG_2171.jpg" class="pic pic13"> 
+			<img src="images/IMG_3615.jpg" class="pic pic14"> 
+			<img src="images/IMG_3771.jpg" class="pic pic15">
+			<img src="images/IMG_4646.jpg" class="pic pic16">
+			<img src="images/IMG_5277.jpg" class="pic pic17">
+			<img src="images/IMG_5533.jpg" class="pic pic18">
+			<img src="images/IMG_5635.jpg" class="pic pic19">
+			<img src="images/IMG_5713.jpg" class="pic pic20">
+		</div>
+		<hr>
+		<footer class="questions">
+			<div class="box box1">
+				<h3> Have questions? </h3>
+				<p> If you have any questions or comments about the content of this website, fill out the form to the right and we'll get back to you soon. </p>
+				<small> Copyright &copy; 2018 Rachel Pierstorff. </small>
+			</div>
+			<div class="box box2">
+				<form action="" method="POST" id="usrform">
+					<input type="text" name="user_name" placeholder="Name"> <br>
+					<input type="text" placeholder="Phone number (5551112222)" name="phone" pattern="[\d][\d][\d][\d][\d][\d][\d][\d][\d][\d]"> <br>
+					<textarea placeholder="Your question or comment" name="question" form="usrform" rows="2" ></textarea> <br>
+					<button onclick="form1()">Submit</button>
+				</form>
+			 </div>
+		</footer>
+	</body>
+</html>

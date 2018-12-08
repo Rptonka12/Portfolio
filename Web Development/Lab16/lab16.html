@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<htmL>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 16</title>
+		<link rel="stylesheet" href="lab16stylesheet.css">
+	</head>
+	<body>
+		<h1> Flexbox Layout </h1>
+		<div id="container">
+			<div class="box box1"> 1 </div>
+			<div class="box box2"> 2 </div>
+			<div class="box box3"> 3 </div>
+			<div class="box box4"> 4 </div>
+			<div class="box box5"> 5 </div>
+			<div class="box box6"> 6 </div>
+			<div class="box box7"> 7 </div>
+			<div class="box box8"> 8 </div>
+			<div class="box box9"> 9 </div>
+			<div class="box box10"> 10 </div>
+		</div>
+
+		<h2> Menu Bar Example </h2>
+		<ul id="menubar">
+			<li class="menu map"> MAP</li>
+			<li class="menu calendar"> CALENDAR </li>
+			<li class="menu lists"> LISTS </li>
+			<li class="menu address"> ADDRESS BOOK </li>
+		</ul>
+
+		<!--FOR GRID BOX LAYOUT -->
+		<h1> Gridbox Layout </h1>
+		<div id="gridcontainer">
+			<div class="placeslist">
+				<h2> Lists of Important Places </h2>
+			</div>
+			<div class="placesbeen">
+				<ol> <h3> Places I've Been </h3>
+					<li> 
+						<h4 class="date"> 1995 </h4> 
+						<div class="location">  Hawaii </div>
+					</li>
+					<li> 
+						<h4 class="date"> 1997 </h4> 
+						<div class="location"> Alaska </div> 
+					</li>
+					<li> 
+						<h4 class="date"> 2000 </h4> 
+						<div class="location">Wisconsin </div>
+					</li>
+					<li> 
+						<h4 class="date"> 2001 </h4> 
+						<div class="location"> Minnesota</div> 
+					</li>
+					<li> 
+						<h4 class="date"> 2001 </h4> 
+						<div class="location"> Spain, France </div>
+					</li>
+					<li> 
+						<h4 class="date"> 2002 </h4> 
+						<div class="location"> Mexico</div>
+					</li>
+				</ol>
+			</div>
+			<div class="placesvisit">
+				<ul> <h4> Places I Want To Visit </h4>
+					<li> England </li>
+					<li> South Africa </li>
+					<li> Brazil </li>
+					<li> New York </li>
+					<li> Morocco </li>
+					<li> New Zealand </li>
+				</ul>
+			</div>
+			<div class="placetypes heading">
+				<h4> Lists To Keep Track Of </h4>
+			</div>
+			<div class="placetypes outdoor">
+				<ul> <h4> Outdoor Places </h4>
+					<li> National Parks </li>
+					<li> Peak Bagging </li>
+					<li> Ski Resorts </li>
+					<li> Skydiving Drop Zones </li>
+					<li> State High Points </li>
+				</ul>
+			</div>
+			<div class="placetypes buildings">
+				<ul> <h4> Buildings </h4>
+					<li> Capital Buildings </li>
+					<li> Sports Arenas </li>
+					<li> Airports </li>
+					<li> Museums </li>
+				</ul>
+			</div>
+			<div class="placetypes routes">
+				<ul> <h4> Routes </h4>
+					<li> Roadtrips </li>
+					<li> Hikes/Trails </li>
+					<li> Bike Trails </li>
+					<li> Rail Trips </li>
+				</ul>
+			</div>
+			<div class="questions">
+				<footer>
+					<p> Have questions? Submit your question and we'll get back to you soon!
+						<form action="/form-handler" method="POST">
+							<fieldset>
+								<legend> Customer Information </legend>
+								<label for="name"> Name: </label>
+								<input placeholder="Name" autocomplete="given-name" type="text" id="name" name="user_name">
+								<label for="phone">Phone:</label>
+								<input type="text" placeholder="(5551112222)"id="phone" name="phone" pattern="[\d][\d][\d][\d][\d][\d][\d][\d][\d][\d]"> 
+							</fieldset>
+							<fieldset>
+								<label>Your question or comment: <br> <textarea name="question" rows="4" cols="50"> </textarea> </label>  
+								<br>
+								<button type="submit">Submit</submit> </button>
+							</fieldset>
+						</form>
+						<br>
+						<small> Copyright &copy; 2018 Rachel Pierstorff. </small> 
+					</p>
+				</footer>
+			</div>
+		</div>
+	</body>
+</htmL>

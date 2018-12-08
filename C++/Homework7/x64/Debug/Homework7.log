@@ -1,0 +1,21 @@
+﻿  VoxelShape.cpp
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(151): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(152): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(153): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(154): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(155): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(156): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(160): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(161): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(162): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(164): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(165): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(166): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(168): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(169): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(170): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(172): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(173): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(174): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\rachel\source\repos\homework7\homework7\voxelshape.cpp(353): warning C4018: '<': signed/unsigned mismatch
+  Homework7.vcxproj -> C:\Users\Rachel\source\repos\Homework7\x64\Debug\Homework7.exe
